@@ -1,105 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OpitCycleTime</title>
+  <title>Opit Cycle Time</title>
 
-  <!-- Paddle -->
-  <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       background: #0b1220;
       color: white;
-      scroll-behavior: smooth;
+      text-align: center;
     }
 
     header {
-      text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 1.2s ease-in;
+      padding: 70px 20px;
     }
 
     header img {
-      width: 140px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 40px;
-      margin: 10px 0;
+      width: 80px;
     }
 
     .subtitle {
       color: #9ca3af;
-      margin-bottom: 30px;
-    }
-
-    .cta {
-      padding: 12px 20px;
-      background: #3b82f6;
-      color: white;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
     }
 
     section {
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .feature {
-      width: 260px;
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid #334155;
-      transition: 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .pricing {
       display: flex;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
     .card {
       background: #1e293b;
-      padding: 25px;
-      border-radius: 12px;
-      width: 230px;
-      border: 1px solid #334155;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: #3b82f6;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
     }
 
     .price {
-      font-size: 26px;
       color: #3b82f6;
+      font-size: 22px;
+    }
+
+    button {
+      background: #3b82f6;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 6px;
     }
 
     footer {
-      text-align: center;
-      padding: 40px;
+      margin-top: 40px;
+      padding: 20px;
       color: #9ca3af;
     }
 
@@ -108,11 +70,6 @@
       margin: 0 10px;
       text-decoration: none;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 
@@ -120,37 +77,11 @@
 
 <header>
   <img src="logo.png">
-
   <h1>Opit Cycle Time</h1>
-  <p class="subtitle">Improve workflows and efficiency with smart cycle tracking.</p>
-
-  <button class="cta" onclick="scrollToPricing()">Get Started</button>
+  <p class="subtitle">Optimize mining cycle performance</p>
 </header>
 
 <section>
-  <h2>Features</h2>
-
-  <div class="features">
-
-    <div class="feature">
-      <h3>📊 Cycle Analytics</h3>
-      <p>Analyze performance and optimize operations.</p>
-    </div>
-
-    <div class="feature">
-      <h3>⚡ Efficiency Boost</h3>
-      <p>Reduce delays and increase productivity.</p>
-    </div>
-
-    <div class="feature">
-      <h3>📈 Smart Insights</h3>
-      <p>Make better decisions in real-time.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="pricing">
   <h2>Pricing</h2>
 
   <div class="pricing">
@@ -158,53 +89,49 @@
     <div class="card">
       <h3>Monthly</h3>
       <p class="price">$10</p>
-      <p>/ month</p>
-      <button class="cta" onclick="buy('MONTHLY_PRODUCT_ID')">Subscribe</button>
+      <button onclick="buy('pri_01kw2e2tf9t3f13fjk4va14419')">Subscribe</button>
     </div>
 
     <div class="card">
       <h3>Quarterly</h3>
       <p class="price">$25</p>
-      <p>/ 3 months</p>
-      <button class="cta" onclick="buy('QUARTER_PRODUCT_ID')">Subscribe</button>
+      <button onclick="buy('pri_01kw2e6b7we0w60ysxd0dav9tv')">Subscribe</button>
     </div>
 
     <div class="card">
       <h3>6 Months</h3>
       <p class="price">$45</p>
-      <p>/ 6 months</p>
-      <button class="cta" onclick="buy('SIX_PRODUCT_ID')">Subscribe</button>
+      <button onclick="buy('pri_01kw2e8w13a2myazrva73zr6z4')">Subscribe</button>
     </div>
 
     <div class="card">
       <h3>Yearly</h3>
       <p class="price">$80</p>
-      <p>/ year</p>
-      <button class="cta" onclick="buy('YEAR_PRODUCT_ID')">Subscribe</button>
+      <button onclick="buy('pri_01kw2e57pggy62chbf4dt66bmp')">Subscribe</button>
     </div>
 
   </div>
 </section>
 
 <footer>
-  <a href="terms.html">Terms</a> |
-  <a href="privacy.html">Privacy</a> |
-  <a href="refund.html">Refund</a>
+  terms.htmlTerms</a>
+  privacy.htmlPrivacy</a>
+  refund.htmlRefund</a>
+  <p>Contact: opitcycletimecounter@gmail.com</p>
 </footer>
 
 <script>
-  function scrollToPricing() {
-    document.getElementById("pricing").scrollIntoView({ behavior: "smooth" });
-  }
+Paddle.Environment.set("production");
 
-  // ✅ Paddle setup (REPLACE vendor ID later)
-  Paddle.Setup({ vendor: YOUR_VENDOR_ID });
+Paddle.Initialize({
+  token: "PUT_YOUR_CLIENT_TOKEN_HERE"
+});
 
-  function buy(productId) {
-    Paddle.Checkout.open({
-      product: productId
-    });
-  }
+function buy(priceId) {
+  Paddle.Checkout.open({
+    items: [{ priceId: priceId, quantity: 1 }]
+  });
+}
 </script>
 
 </body>
